@@ -1,4 +1,3 @@
-from  gestion.zona import Zona
 from mamifero import Mamifero
 from ave import Ave
 from reptil import Reptil
