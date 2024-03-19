@@ -19,9 +19,9 @@ class Animal:
         return "desplazarse"
     
     def totalPorTipo(cls):
-        return "Mamiferos:"+len(Mamifero.getListado())+"\n"+"Aves:"+len(Ave.getListado())+"\n"+"Reptiles:"+len(Reptil.getListado())+"\n"+"Peces:"+len(Pez.getListado())+"\n"+"Anfibios:"+len(Anfibio.getListado())
+        return "Mamiferos: "+str(len(Mamifero.getListado()))+"\n"+"Aves: "+str(len(Ave.getListado()))+"\n"+"Reptiles: "+str(len(Reptil.getListado()))+"\n"+"Peces: "+str(len(Pez.getListado()))+"\n"+"Anfibios: "+str(len(Anfibio.getListado()))
 
-    def __str__(self):
+    def toString(self):
         if Animal.getZona()!=None:
             return "Mi nombre es "+ Animal.getNombre()+", tengo una edad de " +Animal.getEdad()+ ", habito en "+Animal.getHabitat()+" y mi genero es "+Animal.getGenero()+", la zona en la que me ubico es "+Animal.getZona().getNombre()+", en el "+Animal.getZona().getZoo().getNombre()
         else:

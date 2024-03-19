@@ -3,7 +3,7 @@ class Ave (Animal):
 
     _listado = []
     halcones = 0
-    agulas = 0
+    aguilas = 0
 
     def __init__(self, nombre=None, edad=0, habitat=None, genero=None, colorPlumas=None):
         super().__init__(nombre, edad, habitat, genero)
@@ -25,7 +25,7 @@ class Ave (Animal):
     @classmethod
     def crearAguila(cls,nombre,edad,genero):
         ave = Ave(nombre,edad,"montanas",genero,"blanco y amarillo")
-        Ave.agulas+=1
+        Ave.aguilas+=1
         return ave
     
     def setColorPlumas (self, colorPlumas):
