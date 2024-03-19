@@ -1,9 +1,4 @@
-from mamifero import Mamifero
-from ave import Ave
-from reptil import Reptil
-from pez import Pez
-from anfibio import Anfibio
-
+import zooAnimales
 class Animal:
     _totalAnimales = 0
 
@@ -18,9 +13,10 @@ class Animal:
     def movimiento (self):
         return "desplazarse"
     
-    def totalPorTipo(cls):
-        return "Mamiferos: "+str(len(Mamifero.getListado()))+"\n"+"Aves: "+str(len(Ave.getListado()))+"\n"+"Reptiles: "+str(len(Reptil.getListado()))+"\n"+"Peces: "+str(len(Pez.getListado()))+"\n"+"Anfibios: "+str(len(Anfibio.getListado()))
-
+    @staticmethod
+    def totalPorTipo():
+        return "Mamiferos : " + str(zooAnimales.mamifero.Mamifero.cantidadMamiferos()) + "\nAves : " + str(zooAnimales.ave.Ave.cantidadAves()) + "\nReptiles : " + str(zooAnimales.reptil.Reptil.cantidadReptiles()) + "\nPeces : " + str(zooAnimales.pez.Pez.cantidadPeces()) + "\nAnfibios : " + str(zooAnimales.anfibio.Anfibio.cantidadAnfibios())
+    
     def toString(self):
         if Animal.getZona()!=None:
             return "Mi nombre es "+ Animal.getNombre()+", tengo una edad de " +Animal.getEdad()+ ", habito en "+Animal.getHabitat()+" y mi genero es "+Animal.getGenero()+", la zona en la que me ubico es "+Animal.getZona().getNombre()+", en el "+Animal.getZona().getZoo().getNombre()
